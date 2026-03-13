@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Varidhi — the team, mission, and vision behind India's most innovative water bottle advertising platform." />
+  <title>About — Varidhi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'], playfair: ['Playfair Display', 'serif'] },
+          colors: {
+            ocean: { 50:'#e8f4fd',100:'#c3dff9',200:'#8fc3f2',300:'#4fa0e8',400:'#1a7fd4',500:'#0f5fa8',600:'#0a4282',700:'#062d5e',800:'#031b3d',900:'#010d20',950:'#000610' },
+            gold: { 300:'#f5d78e',400:'#efc050',500:'#d4a017',600:'#a87c0d' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi Logo" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="product.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Our Product</a></li>
+        <li><a href="faq.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">FAQ</a></li>
+        <li><a href="about.html" class="nav-link text-sm font-medium text-white relative">About</a></li>
+        <li><a href="contact.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white">Start Advertising</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+      <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="product.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Our Product</a>
+        <a href="faq.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">FAQ</a>
+        <a href="about.html" class="text-lg font-medium text-white">About</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Contact</a>
+        <a href="contact.html" class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white">Start Advertising</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="inner-hero pt-28 pb-20" style="background: radial-gradient(ellipse at 30% 70%, #0d3b6e 0%, #062d5e 35%, #031b3d 70%, #000610 100%);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="max-w-3xl">
+        <span class="section-tag mb-6 inline-block">Our Story</span>
+        <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+          We Saw an Opportunity<br /><span class="gradient-text">In Every Bottle.</span>
+        </h1>
+        <p class="text-slate-300 text-xl leading-relaxed">
+          Varidhi was born from a simple idea: water is universal, and so is the power of a good message.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+        <div class="flex-1 reveal-up">
+          <div class="inline-flex w-12 h-12 rounded-xl bg-ocean-800 border border-ocean-600 items-center justify-center mb-6">
+            <i class="fa-solid fa-bullseye text-ocean-300"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-4">Our Mission</h2>
+          <p class="text-slate-300 leading-relaxed">
+            To democratise brand advertising by creating an affordable, measurable, and genuinely impactful medium that connects businesses directly with their target consumers through the most universal of mediums — water.
+          </p>
+        </div>
+        <div class="flex-1 reveal-up" style="--delay:0.15s">
+          <div class="inline-flex w-12 h-12 rounded-xl bg-ocean-800 border border-ocean-600 items-center justify-center mb-6">
+            <i class="fa-solid fa-eye text-ocean-300"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-4">Our Vision</h2>
+          <p class="text-slate-300 leading-relaxed">
+            A world where every small business, startup, and enterprise has access to a physical advertising network as sophisticated and data-driven as the best digital platforms — without the noise, the competition, or the algorithm dependency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM WE SOLVE -->
+  <section class="py-24 bg-ocean-900/20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 reveal-up">
+        <span class="section-tag mb-4 inline-block">The Problem</span>
+        <h2 class="section-heading">Advertising Is Broken.<br /><span class="gradient-text">We Fixed It.</span></h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="step-card reveal-up" style="--delay:0s">
+          <div class="step-icon-wrap"><i class="fa-solid fa-ban text-2xl text-red-400"></i></div>
+          <h3 class="text-lg font-bold text-white mt-6 mb-3">Ad Fatigue is Real</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">The average person sees 6,000–10,000 ads per day. Most are ignored within milliseconds. Brands are spending more and getting less attention.</p>
+        </div>
+        <div class="step-card reveal-up" style="--delay:0.1s">
+          <div class="step-icon-wrap"><i class="fa-solid fa-shuffle text-2xl text-yellow-400"></i></div>
+          <h3 class="text-lg font-bold text-white mt-6 mb-3">Algorithms Are Unpredictable</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Platform algorithms change overnight. Organic reach collapses. Ad costs inflate. Brands are at the mercy of tech giants for visibility.</p>
+        </div>
+        <div class="step-card reveal-up" style="--delay:0.2s">
+          <div class="step-icon-wrap"><i class="fa-solid fa-droplet text-2xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mt-6 mb-3">Varidhi Changes Everything</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">A physical medium with digital tracking. No algorithms. No ad blockers. Just your brand in someone's hand, with data to prove it works.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 reveal-up">
+        <span class="section-tag mb-4 inline-block">What We Stand For</span>
+        <h2 class="section-heading">Our Core Values</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="feature-card reveal-up text-center" style="--delay:0s">
+          <div class="feature-icon-bg mx-auto mb-5"><i class="fa-solid fa-handshake text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Trust</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Transparent pricing, honest reporting, and honest distribution. What we promise, we deliver.</p>
+        </div>
+        <div class="feature-card reveal-up text-center" style="--delay:0.1s">
+          <div class="feature-icon-bg mx-auto mb-5"><i class="fa-solid fa-lightbulb text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Innovation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We constantly push the boundaries of what an advertising medium can do — offline and online.</p>
+        </div>
+        <div class="feature-card reveal-up text-center" style="--delay:0.2s">
+          <div class="feature-icon-bg mx-auto mb-5"><i class="fa-solid fa-leaf text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Sustainability</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Every bottle performs double duty — hydration and advertising — reducing waste per impression.</p>
+        </div>
+        <div class="feature-card reveal-up text-center" style="--delay:0.3s">
+          <div class="feature-icon-bg mx-auto mb-5"><i class="fa-solid fa-users text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Impact</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We measure success by the genuine results we create for brands and the value we add to consumers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO DISPLAY -->
+  <section class="py-24 bg-ocean-900/20">
+    <div class="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+      <div class="reveal-up">
+        <img src="../images/logo.jpeg" alt="Varidhi — Pure Vast Source" class="h-40 md:h-56 w-auto mx-auto object-contain mb-8 drop-shadow-2xl" />
+        <p class="text-slate-300 text-xl leading-relaxed font-light italic">
+          "Pure · Vast · Source — the three principles behind every bottle, every campaign, every connection."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="cta-bg absolute inset-0"></div>
+    <div class="absolute inset-0 bg-ocean-950/60"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto px-6 reveal-up">
+      <h2 class="font-playfair text-4xl md:text-5xl font-black text-white mb-6">Join the Varidhi<br /><span class="gradient-text">Movement</span></h2>
+      <p class="text-slate-300 mb-8 text-lg">Be one of the first brands to advertise through India's most innovative distribution network.</p>
+      <a href="contact.html" class="btn-primary px-10 py-4 rounded-full font-bold text-white inline-flex items-center gap-2 group">
+        Start a Campaign <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <div class="flex gap-8">
+        <a href="product.html" class="footer-link">Product</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <p class="text-slate-500 text-sm">© 2025 Varidhi</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

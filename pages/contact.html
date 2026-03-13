@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Varidhi to start your water bottle advertising campaign. Get a free quote and talk to our team today." />
+  <title>Contact — Varidhi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'], playfair: ['Playfair Display', 'serif'] },
+          colors: {
+            ocean: { 50:'#e8f4fd',100:'#c3dff9',200:'#8fc3f2',300:'#4fa0e8',400:'#1a7fd4',500:'#0f5fa8',600:'#0a4282',700:'#062d5e',800:'#031b3d',900:'#010d20',950:'#000610' },
+            gold: { 300:'#f5d78e',400:'#efc050',500:'#d4a017',600:'#a87c0d' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi Logo" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="product.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Our Product</a></li>
+        <li><a href="faq.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">FAQ</a></li>
+        <li><a href="about.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">About</a></li>
+        <li><a href="contact.html" class="nav-link text-sm font-medium text-white relative">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white">Start Advertising</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+      <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="product.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Our Product</a>
+        <a href="faq.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">FAQ</a>
+        <a href="about.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">About</a>
+        <a href="contact.html" class="text-lg font-medium text-white">Contact</a>
+        <a href="contact.html" class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white">Start Advertising</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="inner-hero pt-28 pb-20" style="background: radial-gradient(ellipse at 70% 60%, #0d3b6e 0%, #062d5e 35%, #031b3d 70%, #000610 100%);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+      <span class="section-tag mb-6 inline-block">Let's Talk</span>
+      <h1 class="font-playfair text-5xl md:text-6xl font-black leading-tight mb-6">
+        Your Brand's Next Big<br /><span class="gradient-text">Move Starts Here.</span>
+      </h1>
+      <p class="text-slate-300 text-xl leading-relaxed max-w-xl mx-auto">
+        Tell us about your brand and campaign goals. We'll come back with a tailored proposal within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col lg:flex-row gap-16">
+
+        <!-- Left: Info cards -->
+        <div class="lg:w-2/5 space-y-6 reveal-up">
+          <div class="value-card">
+            <div class="value-card-icon"><i class="fa-solid fa-envelope text-ocean-300"></i></div>
+            <div>
+              <h3 class="font-semibold text-white mb-1">Email Us</h3>
+              <a href="mailto:hello@varidhi.in" class="text-ocean-300 text-sm hover:text-ocean-200 transition-colors">hello@varidhi.in</a>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card-icon"><i class="fa-solid fa-phone text-ocean-300"></i></div>
+            <div>
+              <h3 class="font-semibold text-white mb-1">Call Us</h3>
+              <p class="text-slate-400 text-sm">+91 98765 43210</p>
+              <p class="text-slate-500 text-xs mt-1">Mon–Sat, 9AM–7PM IST</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card-icon"><i class="fa-solid fa-clock text-ocean-300"></i></div>
+            <div>
+              <h3 class="font-semibold text-white mb-1">Response Time</h3>
+              <p class="text-slate-400 text-sm">We respond to all enquiries within 24 business hours.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card-icon"><i class="fa-solid fa-location-dot text-ocean-300"></i></div>
+            <div>
+              <h3 class="font-semibold text-white mb-1">Based In</h3>
+              <p class="text-slate-400 text-sm">India — serving brands nationally.</p>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="pt-4">
+            <p class="text-xs text-slate-500 uppercase tracking-widest mb-4">Follow Us</p>
+            <div class="flex gap-3">
+              <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="flex-1 reveal-up" style="--delay:0.15s">
+          <div style="background: linear-gradient(145deg, rgba(10,66,130,0.15) 0%, rgba(3,27,61,0.1) 100%); border: 1px solid rgba(79,160,232,0.12); border-radius: 24px; padding: 2.5rem;">
+            <h2 class="text-2xl font-bold text-white mb-2">Get a Free Campaign Proposal</h2>
+            <p class="text-slate-400 text-sm mb-8">Fill in the form and we'll prepare a custom campaign plan for your brand.</p>
+
+            <form id="contact-form" class="space-y-6">
+              <!-- Row 1 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label" for="full-name">Full Name *</label>
+                  <input id="full-name" type="text" name="name" class="contact-input" placeholder="Your full name" required />
+                </div>
+                <div>
+                  <label class="form-label" for="company-name">Company / Brand *</label>
+                  <input id="company-name" type="text" name="company" class="contact-input" placeholder="Company or brand name" required />
+                </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input id="email" type="email" name="email" class="contact-input" placeholder="you@company.com" required />
+                </div>
+                <div>
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input id="phone" type="tel" name="phone" class="contact-input" placeholder="+91 00000 00000" />
+                </div>
+              </div>
+
+              <!-- Budget -->
+              <div>
+                <label class="form-label" for="budget">Monthly Budget</label>
+                <select id="budget" name="budget" class="contact-input">
+                  <option value="">Select a range…</option>
+                  <option value="starter">₹10,000 – ₹20,000</option>
+                  <option value="growth">₹20,000 – ₹50,000</option>
+                  <option value="pro">₹50,000 – ₹1,00,000</option>
+                  <option value="enterprise">₹1,00,000+</option>
+                </select>
+              </div>
+
+              <!-- Target cities -->
+              <div>
+                <label class="form-label" for="cities">Target Cities</label>
+                <input id="cities" type="text" name="cities" class="contact-input" placeholder="e.g. Mumbai, Bangalore, Delhi…" />
+              </div>
+
+              <!-- Campaign type -->
+              <div>
+                <label class="form-label" for="campaign-type">Campaign Type</label>
+                <select id="campaign-type" name="campaign_type" class="contact-input">
+                  <option value="">Select…</option>
+                  <option value="brand-awareness">Brand Awareness</option>
+                  <option value="product-launch">Product Launch</option>
+                  <option value="lead-gen">Lead Generation</option>
+                  <option value="app-install">App Install</option>
+                  <option value="event">Event Promotion</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label class="form-label" for="message">Tell Us About Your Brand *</label>
+                <textarea id="message" name="message" class="contact-input" placeholder="Briefly describe your brand, target audience, and campaign goals…" required></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn-primary w-full py-4 rounded-full font-bold text-lg text-white flex items-center justify-center gap-3 group">
+                Send My Enquiry
+                <i class="fa-solid fa-paper-plane transition-transform duration-300 group-hover:translate-x-1"></i>
+              </button>
+
+              <p class="text-center text-xs text-slate-500 mt-4">
+                <i class="fa-solid fa-lock text-xs mr-1"></i>
+                Your information is secure and will never be shared.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="py-24 bg-ocean-900/20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 reveal-up">
+        <span class="section-tag mb-4 inline-block">The Journey</span>
+        <h2 class="section-heading">What Happens After You Reach Out</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="step-card reveal-up text-center" style="--delay:0s">
+          <div class="step-number">01</div>
+          <div class="step-icon-wrap mx-auto"><i class="fa-solid fa-envelope-open-text text-2xl text-ocean-300"></i></div>
+          <h3 class="text-base font-bold text-white mt-6 mb-2">Receive Your Enquiry</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">We review your submission within a few hours.</p>
+        </div>
+        <div class="step-card reveal-up text-center" style="--delay:0.1s">
+          <div class="step-number">02</div>
+          <div class="step-icon-wrap mx-auto"><i class="fa-solid fa-handshake text-2xl text-ocean-300"></i></div>
+          <h3 class="text-base font-bold text-white mt-6 mb-2">Discovery Call</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Our team sets up a 30-min call to understand your brand goals.</p>
+        </div>
+        <div class="step-card reveal-up text-center" style="--delay:0.2s">
+          <div class="step-number">03</div>
+          <div class="step-icon-wrap mx-auto"><i class="fa-solid fa-file-contract text-2xl text-ocean-300"></i></div>
+          <h3 class="text-base font-bold text-white mt-6 mb-2">Custom Proposal</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">We prepare a tailored campaign proposal with pricing and timelines.</p>
+        </div>
+        <div class="step-card reveal-up text-center" style="--delay:0.3s">
+          <div class="step-number">04</div>
+          <div class="step-icon-wrap mx-auto"><i class="fa-solid fa-rocket text-2xl text-ocean-300"></i></div>
+          <h3 class="text-base font-bold text-white mt-6 mb-2">Campaign Go-Live</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Your bottles hit distribution within 7–10 business days of approval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi" class="h-12 w-auto rounded-sm object-contain mb-4" /></a>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-xs">Varidhi turns everyday water bottles into powerful advertising surfaces, connecting brands with real consumers through QR-powered experiences.</p>
+          <div class="flex items-center gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-widest">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="product.html" class="footer-link">Our Product</a></li>
+            <li><a href="faq.html" class="footer-link">FAQ</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-widest">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-ocean-400 text-sm mt-0.5"></i>
+              <a href="mailto:hello@varidhi.in" class="footer-link text-sm">hello@varidhi.in</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-ocean-400 text-sm mt-0.5"></i>
+              <span class="text-slate-400 text-sm">+91 98765 43210</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-ocean-400 text-sm mt-0.5"></i>
+              <span class="text-slate-400 text-sm">India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-ocean-800/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500 text-sm">© 2025 Varidhi. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

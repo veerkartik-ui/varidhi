@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Varidhi's water bottle advertising product — high-visibility, QR-powered brand campaigns distributed across India's top footfall locations." />
+  <title>Our Product — Varidhi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'], playfair: ['Playfair Display', 'serif'] },
+          colors: {
+            ocean: { 50:'#e8f4fd',100:'#c3dff9',200:'#8fc3f2',300:'#4fa0e8',400:'#1a7fd4',500:'#0f5fa8',600:'#0a4282',700:'#062d5e',800:'#031b3d',900:'#010d20',950:'#000610' },
+            gold: { 300:'#f5d78e',400:'#efc050',500:'#d4a017',600:'#a87c0d' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <a href="../index.html" class="flex items-center gap-3">
+        <img src="../images/logo.jpeg" alt="Varidhi Logo" class="h-10 w-auto rounded-sm object-contain" />
+      </a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="product.html" class="nav-link text-sm font-medium text-white relative">Our Product</a></li>
+        <li><a href="faq.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">FAQ</a></li>
+        <li><a href="about.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">About</a></li>
+        <li><a href="contact.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white">Start Advertising</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+      <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="product.html" class="text-lg font-medium text-white">Our Product</a>
+        <a href="faq.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">FAQ</a>
+        <a href="about.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">About</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Contact</a>
+        <a href="contact.html" class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white">Start Advertising</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="inner-hero pt-28 pb-20" style="background: radial-gradient(ellipse at 50% 80%, #0d3b6e 0%, #062d5e 35%, #031b3d 70%, #000610 100%);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+      <span class="section-tag mb-6 inline-block">The Varidhi Platform</span>
+      <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+        Water Bottles as<br /><span class="gradient-text">Advertising Surfaces</span>
+      </h1>
+      <p class="text-slate-300 text-xl leading-relaxed max-w-2xl mx-auto">
+        An end-to-end advertising platform that prints your brand on water bottles and puts them in the hands of your ideal customers.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCT OVERVIEW -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+        <div class="flex-1 reveal-up">
+          <img src="../images/bottle.jpeg" alt="Varidhi Branded Bottle" class="w-72 mx-auto lg:mx-0 drop-shadow-2xl" style="filter: drop-shadow(0 32px 64px rgba(10,66,130,0.6));" />
+        </div>
+        <div class="flex-1 reveal-up" style="--delay:0.15s">
+          <span class="section-tag mb-4 inline-block">The Medium</span>
+          <h2 class="section-heading mb-6">A Canvas That People<br /> Carry With Them</h2>
+          <p class="text-slate-300 leading-relaxed mb-6">Traditional advertising gets scrolled past in milliseconds. Varidhi's water bottles are held, seen, shared, and scanned — creating a genuine connection between brand and consumer.</p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-slate-300">
+              <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+              Premium-quality 500ml water bottles
+            </li>
+            <li class="flex items-center gap-3 text-slate-300">
+              <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+              Full-label custom brand print
+            </li>
+            <li class="flex items-center gap-3 text-slate-300">
+              <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+              Integrated trackable QR code
+            </li>
+            <li class="flex items-center gap-3 text-slate-300">
+              <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+              Distributed across 500+ partner outlets
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature grid 6 cards -->
+      <div class="text-center mb-16 reveal-up">
+        <span class="section-tag mb-4 inline-block">All Features</span>
+        <h2 class="section-heading">Everything You Need to<br />Run a Winning Campaign</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card reveal-up" style="--delay:0s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-palette text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Custom Brand Design</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Our design team crafts a stunning label that represents your brand identity with full-bleed printing on premium bottles.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:0.08s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-qrcode text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Smart QR Codes</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Each bottle has a unique, trackable QR code that leads customers to any URL — product pages, offers, videos, or landing pages.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:0.16s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-chart-bar text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Live Analytics Dashboard</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">View real-time scan data, geographic heat maps, time-of-day engagement, and click-through rates from your personal dashboard.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:0.24s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-store text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Partner Outlet Network</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">500+ curated distribution points — cafes, gyms, co-working spaces, hospitals, and high-footfall retail locations across cities.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:0.32s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-bullseye text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Geographic Targeting</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Choose specific cities, neighbourhoods, or venue types to ensure your bottles reach the exact demographic that matters most to your brand.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:0.40s">
+          <div class="feature-icon-bg mb-4"><i class="fa-solid fa-rotate text-xl text-ocean-300"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Campaign Refresh</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Run multiple campaigns simultaneously or change your creative between distributions — maximum flexibility for your marketing calendar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-24 bg-ocean-900/20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 reveal-up">
+        <span class="section-tag mb-4 inline-block">Transparent Pricing</span>
+        <h2 class="section-heading">Choose Your Campaign Scale</h2>
+        <p class="section-sub mt-4">All plans include design support, QR analytics, and dedicated account management.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Starter -->
+        <div class="pricing-card reveal-up" style="--delay:0s">
+          <div class="text-sm font-semibold text-ocean-300 uppercase tracking-widest mb-3">Starter</div>
+          <div class="text-4xl font-black text-white mb-1">₹12,999<span class="text-lg font-normal text-slate-400">/mo</span></div>
+          <p class="text-slate-400 text-sm mb-6">Perfect for local businesses</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>1,000 branded bottles/month</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>50 distribution outlets</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>1 city coverage</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>QR analytics dashboard</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Monthly campaign report</li>
+          </ul>
+          <a href="contact.html" class="btn-ghost w-full py-3 rounded-full text-sm font-semibold text-center block">Get Started</a>
+        </div>
+        <!-- Growth (featured) -->
+        <div class="pricing-card featured reveal-up" style="--delay:0.1s">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-ocean-400 to-gold-500 rounded-full text-xs font-bold text-white whitespace-nowrap">Most Popular</div>
+          <div class="text-sm font-semibold text-ocean-300 uppercase tracking-widest mb-3">Growth</div>
+          <div class="text-4xl font-black text-white mb-1">₹29,999<span class="text-lg font-normal text-slate-400">/mo</span></div>
+          <p class="text-slate-400 text-sm mb-6">Ideal for growing brands</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>5,000 branded bottles/month</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>200 distribution outlets</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>2–3 cities coverage</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Advanced QR analytics + heatmaps</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Weekly campaign reports</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Dedicated account manager</li>
+          </ul>
+          <a href="contact.html" class="btn-primary w-full py-3 rounded-full text-sm font-semibold text-center block text-white">Get Started</a>
+        </div>
+        <!-- Enterprise -->
+        <div class="pricing-card reveal-up" style="--delay:0.2s">
+          <div class="text-sm font-semibold text-ocean-300 uppercase tracking-widest mb-3">Enterprise</div>
+          <div class="text-4xl font-black text-white mb-1">Custom</div>
+          <p class="text-slate-400 text-sm mb-6">For national campaigns</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Unlimited bottles</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>500+ distribution outlets</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>Pan-India coverage</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>API data integration</li>
+            <li class="flex items-center gap-3 text-sm text-slate-300"><i class="fa-solid fa-check text-gold-400 text-xs"></i>White-glove campaign management</li>
+          </ul>
+          <a href="contact.html" class="btn-ghost w-full py-3 rounded-full text-sm font-semibold text-center block">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="cta-bg absolute inset-0"></div>
+    <div class="absolute inset-0 bg-ocean-950/60"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto px-6 reveal-up">
+      <h2 class="font-playfair text-4xl md:text-5xl font-black text-white mb-6">Ready to Launch Your<br /><span class="gradient-text">Bottle Campaign?</span></h2>
+      <a href="contact.html" class="btn-primary px-10 py-4 rounded-full font-bold text-white inline-flex items-center gap-2 group">
+        Get a Custom Quote <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <div class="flex gap-8">
+        <a href="product.html" class="footer-link">Product</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <p class="text-slate-500 text-sm">© 2025 Varidhi</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently asked questions about Varidhi's water bottle advertising platform — how it works, costs, analytics, and distribution." />
+  <title>FAQ — Varidhi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'], playfair: ['Playfair Display', 'serif'] },
+          colors: {
+            ocean: { 50:'#e8f4fd',100:'#c3dff9',200:'#8fc3f2',300:'#4fa0e8',400:'#1a7fd4',500:'#0f5fa8',600:'#0a4282',700:'#062d5e',800:'#031b3d',900:'#010d20',950:'#000610' },
+            gold: { 300:'#f5d78e',400:'#efc050',500:'#d4a017',600:'#a87c0d' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi Logo" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="product.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Our Product</a></li>
+        <li><a href="faq.html" class="nav-link text-sm font-medium text-white relative">FAQ</a></li>
+        <li><a href="about.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">About</a></li>
+        <li><a href="contact.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors relative">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white">Start Advertising</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+      <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="product.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Our Product</a>
+        <a href="faq.html" class="text-lg font-medium text-white">FAQ</a>
+        <a href="about.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">About</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Contact</a>
+        <a href="contact.html" class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white">Start Advertising</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="inner-hero pt-28 pb-20" style="background: radial-gradient(ellipse at 50% 80%, #062d5e 0%, #031b3d 50%, #000610 100%);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+      <span class="section-tag mb-6 inline-block">FAQ</span>
+      <h1 class="font-playfair text-5xl md:text-6xl font-black leading-tight mb-6">
+        Got Questions?<br /><span class="gradient-text">We've Got Answers.</span>
+      </h1>
+      <p class="text-slate-300 text-xl leading-relaxed max-w-xl mx-auto">
+        Everything you need to know about advertising on the Varidhi platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <section class="py-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-12">
+
+      <!-- Category: General -->
+      <div class="mb-12 reveal-up">
+        <h2 class="text-xl font-bold text-ocean-300 mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-circle-info text-sm"></i> General
+        </h2>
+        <div class="space-y-3">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">What is Varidhi?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Varidhi is an innovative advertising platform that prints custom brand labels and QR codes on water bottles, then distributes them across high-footfall locations such as cafes, shops, offices, and gyms. When consumers scan the QR code on the bottle, they are taken directly to the advertiser's digital content.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">How is Varidhi different from traditional advertising?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Traditional advertising competes for attention on screens. Varidhi's medium is physical — a bottle the consumer holds in their hands for minutes. There are no algorithms to fight, no ad blockers, and no competition for the same digital real estate. The brand is literally in the consumer's hand.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Who is Varidhi best suited for?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Varidhi is ideal for local businesses, D2C brands, e-commerce companies, educational institutions, healthcare providers, apps, and any business that wants to reach consumers in a memorable, physical way. It's especially effective for brands targeting a young, urban audience in specific geographic areas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Campaign -->
+      <div class="mb-12 reveal-up">
+        <h2 class="text-xl font-bold text-ocean-300 mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-rocket text-sm"></i> Campaign & Process
+        </h2>
+        <div class="space-y-3">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">How long does it take to launch a campaign?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">From design approval to first distribution, a campaign typically goes live within 7–10 business days. Rush options are available for urgent campaigns.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Can I design my own label?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Yes. You can supply your own design files or work with our in-house design team. We will ensure the label meets print specifications and integrates the QR code naturally. All designs go through a quality check before printing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Where are the bottles distributed?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Varidhi distributes bottles to our network of 500+ partner outlets including cafes, co-working spaces, gyms, clinics, retail shops, restaurants, and event venues. You can choose specific venue types or geographic zones to match your target audience.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Can I change my campaign mid-run?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">You can update the destination URL of your QR code at any time without reprinting. For design changes to the label itself, changes apply to the next distribution batch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Analytics -->
+      <div class="mb-12 reveal-up">
+        <h2 class="text-xl font-bold text-ocean-300 mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-chart-line text-sm"></i> Analytics & Reporting
+        </h2>
+        <div class="space-y-3">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">How do I track campaign performance?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Every campaign gets access to a personal analytics dashboard showing real-time scan data, geographic heatmaps, time-of-day engagement, device types, and click-through rates to your destination URL.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">What is the typical QR scan rate?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">On average, our campaigns achieve a 3–8% scan rate per bottle distributed — significantly higher than digital ad click-through rates. Compelling label designs and targeted distribution can push this considerably higher.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Pricing -->
+      <div class="mb-12 reveal-up">
+        <h2 class="text-xl font-bold text-ocean-300 mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-indian-rupee-sign text-sm"></i> Pricing & Contracts
+        </h2>
+        <div class="space-y-3">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Is there a minimum commitment?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">Our Starter plan runs on a monthly basis with no long-term lock-in. Growth and Enterprise plans offer discounts for 3-month and 6-month commitments. You can cancel with 30 days notice at any time.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="text-white font-medium text-sm">Are there setup fees?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-ocean-300 text-sm"></i>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-400 text-sm leading-relaxed">A one-time design and setup fee applies for the first campaign. Subsequent campaigns with the same label design incur no additional setup cost. Custom design work by our team is included in Growth and Enterprise plans.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Still have questions -->
+      <div class="text-center py-12 bg-ocean-900/20 rounded-2xl border border-ocean-800/30 reveal-up">
+        <h3 class="text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
+        <p class="text-slate-400 mb-6">Our team is happy to walk you through everything.</p>
+        <a href="contact.html" class="btn-primary px-8 py-3 rounded-full font-semibold text-white inline-flex items-center gap-2">
+          Talk to Us <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="../index.html"><img src="../images/logo.jpeg" alt="Varidhi" class="h-10 w-auto rounded-sm object-contain" /></a>
+      <div class="flex gap-8">
+        <a href="product.html" class="footer-link">Product</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <p class="text-slate-500 text-sm">© 2025 Varidhi</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
