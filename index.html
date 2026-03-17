@@ -1,481 +1,769 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Varidhi — Turn every water bottle into a brand experience. Advertise with Varidhi's mass distribution network and QR code analytics platform." />
-  <meta name="keywords" content="Varidhi, water bottle advertising, QR code marketing, brand advertising, offline advertising, innovative marketing" />
-  <meta name="author" content="Varidhi" />
-  <meta property="og:title" content="Varidhi — Pure Water. Powerful Advertising." />
-  <meta property="og:description" content="Turn every bottle into a brand experience. Varidhi delivers your advertisement directly into people's hands." />
-  <meta property="og:type" content="website" />
-  <title>Varidhi — Pure Water. Powerful Advertising.</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Varidhi — Turn every water bottle into a brand experience. Advertise with Varidhi's mass distribution network and QR code analytics platform."
+    />
+    <meta
+      name="keywords"
+      content="Varidhi, water bottle advertising, QR code marketing, brand advertising, offline advertising, innovative marketing"
+    />
+    <meta name="author" content="Varidhi" />
+    <meta
+      property="og:title"
+      content="Varidhi — Pure Water. Powerful Advertising."
+    />
+    <meta
+      property="og:description"
+      content="Turn every bottle into a brand experience. Varidhi delivers your advertisement directly into people's hands."
+    />
+    <meta property="og:type" content="website" />
+    <title>Varidhi — Pure Water. Powerful Advertising.</title>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-            playfair: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            ocean: {
-              50: '#e8f4fd',
-              100: '#c3dff9',
-              200: '#8fc3f2',
-              300: '#4fa0e8',
-              400: '#1a7fd4',
-              500: '#0f5fa8',
-              600: '#0a4282',
-              700: '#062d5e',
-              800: '#031b3d',
-              900: '#010d20',
-              950: '#000610',
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              playfair: ["Playfair Display", "serif"],
             },
-            gold: {
-              300: '#f5d78e',
-              400: '#efc050',
-              500: '#d4a017',
-              600: '#a87c0d',
-            }
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+            colors: {
+              ocean: {
+                50: "#e8f4fd",
+                100: "#c3dff9",
+                200: "#8fc3f2",
+                300: "#4fa0e8",
+                400: "#1a7fd4",
+                500: "#0f5fa8",
+                600: "#0a4282",
+                700: "#062d5e",
+                800: "#031b3d",
+                900: "#010d20",
+                950: "#000610",
+              },
+              gold: {
+                300: "#f5d78e",
+                400: "#efc050",
+                500: "#d4a017",
+                600: "#a87c0d",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-ocean-950 text-white font-inter overflow-x-hidden">
+    <!-- ===== NAVBAR ===== -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+    >
+      <div
+        class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img
+            src="images/logo.png"
+            alt="Varidhi Logo"
+            class="h-[120px] w-auto object-contain"
+          />
+        </a>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-    <div class="navbar-inner mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="images/logo.png" alt="Varidhi Logo" class="h-[120px] w-auto object-contain" />
-      </a>
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex items-center gap-8">
+          <li>
+            <a
+              href="pages/product.html"
+              class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative"
+              >Our Product</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/faq.html"
+              class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/about.html"
+              class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/contact.html"
+              class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/contact.html"
+              class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white"
+            >
+              Start Advertising
+            </a>
+          </li>
+        </ul>
 
-      <!-- Desktop Nav -->
-      <ul class="hidden md:flex items-center gap-8">
-        <li><a href="pages/product.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative">Our Product</a></li>
-        <li><a href="pages/faq.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative">FAQ</a></li>
-        <li><a href="pages/about.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative">About</a></li>
-        <li><a href="pages/contact.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 relative">Contact</a></li>
-        <li>
-          <a href="pages/contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-white">
+        <!-- Mobile Hamburger -->
+        <button
+          id="menu-btn"
+          class="md:hidden flex flex-col gap-1.5 p-2 z-50"
+          aria-label="Toggle menu"
+        >
+          <span
+            class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+        <div class="px-6 py-8 flex flex-col gap-6">
+          <a
+            href="pages/product.html"
+            class="text-lg font-medium text-slate-200 hover:text-white transition-colors"
+            >Our Product</a
+          >
+          <a
+            href="pages/faq.html"
+            class="text-lg font-medium text-slate-200 hover:text-white transition-colors"
+            >FAQ</a
+          >
+          <a
+            href="pages/about.html"
+            class="text-lg font-medium text-slate-200 hover:text-white transition-colors"
+            >About</a
+          >
+          <a
+            href="pages/contact.html"
+            class="text-lg font-medium text-slate-200 hover:text-white transition-colors"
+            >Contact</a
+          >
+          <a
+            href="pages/contact.html"
+            class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white mt-2"
+          >
             Start Advertising
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
+    </nav>
 
-      <!-- Mobile Hamburger -->
-      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 z-50" aria-label="Toggle menu">
-        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
-        <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
-        <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 self-end"></span>
-      </button>
-    </div>
+    <!-- ===== HERO SECTION ===== -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center overflow-hidden"
+    >
+      <!-- Animated background -->
+      <div class="hero-bg absolute inset-0"></div>
+      <!-- Animated wave canvas -->
+      <canvas id="wave-canvas" class="absolute inset-0 opacity-30"></canvas>
+      <!-- Gradient overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-ocean-950 via-ocean-950/80 to-transparent"
+      ></div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
-      <div class="px-6 py-8 flex flex-col gap-6">
-        <a href="pages/product.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Our Product</a>
-        <a href="pages/faq.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">FAQ</a>
-        <a href="pages/about.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">About</a>
-        <a href="pages/contact.html" class="text-lg font-medium text-slate-200 hover:text-white transition-colors">Contact</a>
-        <a href="pages/contact.html" class="btn-primary w-fit px-6 py-3 rounded-full text-sm font-semibold text-white mt-2">
-          Start Advertising
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-16"
+      >
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+          <!-- Left Content -->
+          <div class="flex-1 lg:pr-12 text-center lg:text-left">
+            <div
+              class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase mb-8 opacity-0"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"
+              ></span>
+              <span class="text-gold-400"
+                >India's Next-Gen Advertising Platform</span
+              >
+            </div>
+
+            <h1
+              class="hero-headline font-playfair text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-6 opacity-0"
+            >
+              <span class="text-white">Pure Water.</span><br />
+              <span class="gradient-text">Powerful</span><br />
+              <span class="text-white">Advertising.</span>
+            </h1>
+
+            <p
+              class="hero-sub text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 opacity-0"
+            >
+              Turn every bottle into a brand experience.<br />
+              Varidhi delivers your advertisement directly into<br
+                class="hidden md:block"
+              />
+              people's hands.
+            </p>
+
+            <div
+              class="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0"
+            >
+              <a
+                href="pages/contact.html"
+                class="btn-primary px-8 py-4 rounded-full font-semibold text-base text-white inline-flex items-center gap-2 justify-center group"
+              >
+                Start Advertising
+                <i
+                  class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
+              <a
+                href="#how-it-works"
+                class="btn-ghost px-8 py-4 rounded-full font-semibold text-base inline-flex items-center gap-2 justify-center group"
+              >
+                <i class="fa-solid fa-play text-sm"></i>
+                See How It Works
+              </a>
+            </div>
+
+            <!-- Stats row -->
+            <div
+              class="hero-stats flex flex-wrap gap-8 mt-14 justify-center lg:justify-start opacity-0"
+            >
+              <div class="text-center lg:text-left">
+                <div class="text-3xl font-black text-white">350+</div>
+                <div
+                  class="text-xs text-slate-400 uppercase tracking-widest mt-1"
+                >
+                  Distribution Points
+                </div>
+              </div>
+              <div class="w-px bg-slate-700 hidden sm:block"></div>
+              <div class="text-center lg:text-left">
+                <div class="text-3xl font-black text-white">5K+</div>
+                <div
+                  class="text-xs text-slate-400 uppercase tracking-widest mt-1"
+                >
+                  Daily Impressions
+                </div>
+              </div>
+              <div class="w-px bg-slate-700 hidden sm:block"></div>
+              <div class="text-center lg:text-left">
+                <div class="text-3xl font-black text-white">98%</div>
+                <div
+                  class="text-xs text-slate-400 uppercase tracking-widest mt-1"
+                >
+                  Brand Recall Rate
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side — Bottle -->
+          <div class="flex-1 flex justify-center lg:justify-end relative">
+            <div class="bottle-container relative">
+              <!-- Glow rings -->
+              <div
+                class="glow-ring glow-ring-1 absolute inset-0 m-auto rounded-full"
+              ></div>
+              <div
+                class="glow-ring glow-ring-2 absolute inset-0 m-auto rounded-full"
+              ></div>
+              <!-- Bottle image -->
+              <img
+                src="images/bottle.png"
+                alt="Varidhi Advertising Water Bottle"
+                class="bottle-img relative z-10 w-[307px] md:w-96 lg:w-[460px] xl:w-[504px] object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60"
+      >
+        <span class="text-xs text-slate-400 uppercase tracking-widest"
+          >Scroll</span
+        >
+        <i class="fa-solid fa-chevron-down text-slate-400 text-xs"></i>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how-it-works" class="py-28 relative overflow-hidden">
+      <div
+        class="section-bg-glow absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-20 reveal-up">
+          <span class="section-tag">The Process</span>
+          <h2 class="section-heading mt-4">How It Works</h2>
+          <p class="section-sub mt-4">Three simple steps from brand to hand.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <!-- Connector line (desktop) -->
+          <div
+            class="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-transparent via-ocean-400/40 to-transparent pointer-events-none"
+          ></div>
+
+          <!-- Step 1 -->
+          <div class="step-card reveal-up" style="--delay: 0s">
+            <div class="step-number">01</div>
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-pen-nib text-2xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-6 mb-3">
+              Design Your Ad
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Work with our team to design your brand label with a custom QR
+              code that drives customers to your digital experience.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card reveal-up" style="--delay: 0.1s">
+            <div class="step-number">02</div>
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-truck-fast text-2xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-6 mb-3">
+              We Distribute
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Varidhi prints and distributes branded water bottles across
+              hundreds of shops, cafes, and high-footfall locations.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card reveal-up" style="--delay: 0.2s">
+            <div class="step-number">03</div>
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-qrcode text-2xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-6 mb-3">
+              Customers Engage
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Real people scan real QR codes. Every scan is tracked, giving you
+              live analytics and measurable ROI on your campaign.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES / PRODUCT ===== -->
+    <section
+      id="features"
+      class="py-28 bg-ocean-900/30 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-20 reveal-up">
+          <span class="section-tag">Why Varidhi</span>
+          <h2 class="section-heading mt-4">
+            Built for Brands That Want Results
+          </h2>
+          <p class="section-sub mt-4 max-w-2xl mx-auto">
+            Every feature is designed to maximise your brand's reach and deliver
+            measurable ROI.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="feature-card reveal-up" style="--delay: 0s">
+            <div class="feature-icon-bg mb-5">
+              <i class="fa-solid fa-eye text-xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">High Visibility</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Your brand is physically in the customer's hand for minutes — not
+              a 3-second scroll they'll forget.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card reveal-up" style="--delay: 0.1s">
+            <div class="feature-icon-bg mb-5">
+              <i class="fa-solid fa-chart-line text-xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">QR Analytics</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Track every scan in real time. Measure clicks, conversions, and
+              geographic engagement with precision.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card reveal-up" style="--delay: 0.2s">
+            <div class="feature-icon-bg mb-5">
+              <i class="fa-solid fa-network-wired text-xl text-ocean-300"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Mass Distribution</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              350+ partner outlets across cities. Your brand reaches consumers
+              at cafes, shops, offices, and more.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card reveal-up" style="--delay: 0.3s">
+            <div class="feature-icon-bg mb-5">
+              <i
+                class="fa-solid fa-indian-rupee-sign text-xl text-ocean-300"
+              ></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Affordable Reach</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Fraction of the cost of digital ads with none of the algoritm
+              dependency. Pure physical brand reach.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHOWCASE SECTION ===== -->
+    <section id="showcase" class="py-28 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <!-- Bottle mockup left -->
+          <div class="flex-1 relative reveal-up">
+            <div
+              class="showcase-bottle-wrap group mx-auto lg:mx-0"
+              style="max-width: 432px"
+            >
+              <div class="showcase-glow"></div>
+              <img
+                src="images/bottle.png"
+                alt="Varidhi Branded Water Bottle"
+                class="showcase-bottle relative z-10 w-full object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
+              />
+
+            </div>
+          </div>
+
+          <!-- Content right -->
+          <div class="flex-1 reveal-up" style="--delay: 0.15s">
+            <span class="section-tag">The Medium</span>
+            <h2 class="section-heading mt-4 text-left">
+              Your Brand Message<br />
+              <span class="gradient-text">Travels Everywhere.</span>
+            </h2>
+            <p class="text-slate-300 text-lg leading-relaxed mt-6 mb-10">
+              A water bottle is one of the most personal, durable, and
+              high-attention-span advertising surfaces ever created. People
+              carry it, hold it, share it — and then scan it.
+            </p>
+
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <span
+                  class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-check text-xs text-gold-400"></i>
+                </span>
+                <div>
+                  <div class="font-semibold text-white">
+                    Physical + Digital Fusion
+                  </div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    Offline bottle meets online destination via QR — bridging
+                    two worlds.
+                  </div>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-check text-xs text-gold-400"></i>
+                </span>
+                <div>
+                  <div class="font-semibold text-white">Zero Ad Fatigue</div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    Consumers aren't bombarded — they interact on their own
+                    terms.
+                  </div>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-check text-xs text-gold-400"></i>
+                </span>
+                <div>
+                  <div class="font-semibold text-white">
+                    Eco-Conscious Distribution
+                  </div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    Every bottle serves a real purpose — hydration with a
+                    message.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUE / TRUST SECTION ===== -->
+    <section
+      id="why-varidhi"
+      class="py-28 bg-gradient-to-b from-ocean-900/20 to-ocean-950 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-20 reveal-up">
+          <span class="section-tag">Our Edge</span>
+          <h2 class="section-heading mt-4">
+            Why Leading Brands Choose Varidhi
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="value-card reveal-up" style="--delay: 0s">
+            <div class="value-card-icon">
+              <i class="fa-solid fa-link text-ocean-300"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Offline + Digital Synergy
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Most advertising lives entirely in the digital realm, competing
+                for 2 seconds of attention. Varidhi gives you a physical
+                touchpoint that earns genuine engagement and directs to digital
+                content.
+              </p>
+            </div>
+          </div>
+          <div class="value-card reveal-up" style="--delay: 0.1s">
+            <div class="value-card-icon">
+              <i class="fa-solid fa-hand-pointer text-ocean-300"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Direct Consumer Engagement
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                No intermediaries. No algorithms. Your ad is physically handed
+                to a real human being who chose to hydrate — one of the most
+                open moments for brand connection.
+              </p>
+            </div>
+          </div>
+          <div class="value-card reveal-up" style="--delay: 0.2s">
+            <div class="value-card-icon">
+              <i class="fa-solid fa-leaf text-ocean-300"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Eco-Conscious Distribution
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Our bottles serve dual purpose — clean hydration and clean
+                advertising. We partner with sustainability-focused outlets to
+                ensure responsible distribution at scale.
+              </p>
+            </div>
+          </div>
+          <div class="value-card reveal-up" style="--delay: 0.3s">
+            <div class="value-card-icon">
+              <i
+                class="fa-solid fa-arrows-up-down-left-right text-ocean-300"
+              ></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Scalable Brand Exposure
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Start with one city, scale to the nation. Our modular
+                distribution network lets you control geography, volume, and
+                budget — adapting to your campaign in real time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section id="cta" class="py-28 relative overflow-hidden">
+      <div class="cta-bg absolute inset-0"></div>
+      <div class="absolute inset-0 bg-ocean-950/50"></div>
+      <div
+        class="relative z-10 text-center max-w-4xl mx-auto px-6 lg:px-12 reveal-up"
+      >
+        <span class="section-tag mb-6 inline-block">Get Started Today</span>
+        <h2
+          class="font-playfair text-4xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Ready to Put Your Brand<br />
+          <span class="gradient-text">in Every Hand?</span>
+        </h2>
+        <p class="text-slate-300 text-xl mb-10 leading-relaxed">
+          Join forward-thinking brands advertising on Varidhi's distribution
+          network.<br />
+          Real bottles. Real people. Real results.
+        </p>
+        <a
+          href="pages/contact.html"
+          class="btn-primary px-10 py-5 rounded-full font-bold text-lg text-white inline-flex items-center gap-3 group"
+        >
+          Advertise With Varidhi
+          <i
+            class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1.5"
+          ></i>
         </a>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
-    <!-- Animated background -->
-    <div class="hero-bg absolute inset-0"></div>
-    <!-- Animated wave canvas -->
-    <canvas id="wave-canvas" class="absolute inset-0 opacity-30"></canvas>
-    <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-ocean-950 via-ocean-950/80 to-transparent"></div>
-
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-16">
-      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
-        <!-- Left Content -->
-        <div class="flex-1 lg:pr-12 text-center lg:text-left">
-          <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase mb-8 opacity-0">
-            <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
-            <span class="text-gold-400">India's Next-Gen Advertising Platform</span>
-          </div>
-
-          <h1 class="hero-headline font-playfair text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-6 opacity-0">
-            <span class="text-white">Pure Water.</span><br />
-            <span class="gradient-text">Powerful</span><br />
-            <span class="text-white">Advertising.</span>
-          </h1>
-
-          <p class="hero-sub text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 opacity-0">
-            Turn every bottle into a brand experience.<br />
-            Varidhi delivers your advertisement directly into<br class="hidden md:block" /> people's hands.
-          </p>
-
-          <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0">
-            <a href="pages/contact.html" class="btn-primary px-8 py-4 rounded-full font-semibold text-base text-white inline-flex items-center gap-2 justify-center group">
-              Start Advertising
-              <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <a href="index.html">
+              <img
+                src="images/logo.png"
+                alt="Varidhi"
+                class="h-64 w-auto object-contain mb-4"
+              />
             </a>
-            <a href="#how-it-works" class="btn-ghost px-8 py-4 rounded-full font-semibold text-base inline-flex items-center gap-2 justify-center group">
-              <i class="fa-solid fa-play text-sm"></i>
-              See How It Works
-            </a>
-          </div>
-
-          <!-- Stats row -->
-          <div class="hero-stats flex flex-wrap gap-8 mt-14 justify-center lg:justify-start opacity-0">
-            <div class="text-center lg:text-left">
-              <div class="text-3xl font-black text-white">500+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Distribution Points</div>
-            </div>
-            <div class="w-px bg-slate-700 hidden sm:block"></div>
-            <div class="text-center lg:text-left">
-              <div class="text-3xl font-black text-white">10K+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Daily Impressions</div>
-            </div>
-            <div class="w-px bg-slate-700 hidden sm:block"></div>
-            <div class="text-center lg:text-left">
-              <div class="text-3xl font-black text-white">98%</div>
-              <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Brand Recall Rate</div>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+              Varidhi turns everyday water bottles into powerful advertising
+              surfaces, connecting brands with real consumers through QR-powered
+              experiences.
+            </p>
+            <!-- Social Icons -->
+            <div class="flex items-center gap-4 mt-6">
+              <a href="#" class="social-icon" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
             </div>
           </div>
-        </div>
 
-        <!-- Right Side — Bottle -->
-        <div class="flex-1 flex justify-center lg:justify-end relative">
-          <div class="bottle-container relative">
-            <!-- Glow rings -->
-            <div class="glow-ring glow-ring-1 absolute inset-0 m-auto rounded-full"></div>
-            <div class="glow-ring glow-ring-2 absolute inset-0 m-auto rounded-full"></div>
-            <!-- QR glow around label -->
-            <div class="qr-label-glow absolute inset-0 flex items-center justify-center pointer-events-none"></div>
-            <!-- Bottle image -->
-            <img
-              src="images/bottle.jpeg"
-              alt="Varidhi Advertising Water Bottle"
-              class="bottle-img relative z-10 w-64 md:w-80 lg:w-96 xl:w-[420px] object-contain drop-shadow-2xl"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60">
-      <span class="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
-      <i class="fa-solid fa-chevron-down text-slate-400 text-xs"></i>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section id="how-it-works" class="py-28 relative overflow-hidden">
-    <div class="section-bg-glow absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-20 reveal-up">
-        <span class="section-tag">The Process</span>
-        <h2 class="section-heading mt-4">How It Works</h2>
-        <p class="section-sub mt-4">Three simple steps from brand to hand.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-        <!-- Connector line (desktop) -->
-        <div class="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-transparent via-ocean-400/40 to-transparent pointer-events-none"></div>
-
-        <!-- Step 1 -->
-        <div class="step-card reveal-up" style="--delay: 0s">
-          <div class="step-number">01</div>
-          <div class="step-icon-wrap">
-            <i class="fa-solid fa-pen-nib text-2xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mt-6 mb-3">Design Your Ad</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Work with our team to design your brand label with a custom QR code that drives customers to your digital experience.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="step-card reveal-up" style="--delay: 0.1s">
-          <div class="step-number">02</div>
-          <div class="step-icon-wrap">
-            <i class="fa-solid fa-truck-fast text-2xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mt-6 mb-3">We Distribute</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Varidhi prints and distributes branded water bottles across hundreds of shops, cafes, and high-footfall locations.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="step-card reveal-up" style="--delay: 0.2s">
-          <div class="step-number">03</div>
-          <div class="step-icon-wrap">
-            <i class="fa-solid fa-qrcode text-2xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mt-6 mb-3">Customers Engage</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Real people scan real QR codes. Every scan is tracked, giving you live analytics and measurable ROI on your campaign.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES / PRODUCT ===== -->
-  <section id="features" class="py-28 bg-ocean-900/30 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-20 reveal-up">
-        <span class="section-tag">Why Varidhi</span>
-        <h2 class="section-heading mt-4">Built for Brands That Want Results</h2>
-        <p class="section-sub mt-4 max-w-2xl mx-auto">Every feature is designed to maximise your brand's reach and deliver measurable ROI.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1 -->
-        <div class="feature-card reveal-up" style="--delay: 0s">
-          <div class="feature-icon-bg mb-5">
-            <i class="fa-solid fa-eye text-xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-3">High Visibility</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Your brand is physically in the customer's hand for minutes — not a 3-second scroll they'll forget.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="feature-card reveal-up" style="--delay: 0.1s">
-          <div class="feature-icon-bg mb-5">
-            <i class="fa-solid fa-chart-line text-xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-3">QR Analytics</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Track every scan in real time. Measure clicks, conversions, and geographic engagement with precision.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="feature-card reveal-up" style="--delay: 0.2s">
-          <div class="feature-icon-bg mb-5">
-            <i class="fa-solid fa-network-wired text-xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-3">Mass Distribution</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">500+ partner outlets across cities. Your brand reaches consumers at cafes, gyms, offices, and more.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="feature-card reveal-up" style="--delay: 0.3s">
-          <div class="feature-icon-bg mb-5">
-            <i class="fa-solid fa-indian-rupee-sign text-xl text-ocean-300"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-3">Affordable Reach</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Fraction of the cost of digital ads with none of the algoritm dependency. Pure physical brand reach.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SHOWCASE SECTION ===== -->
-  <section id="showcase" class="py-28 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="flex flex-col lg:flex-row items-center gap-16">
-        <!-- Bottle mockup left -->
-        <div class="flex-1 relative reveal-up">
-          <div class="showcase-bottle-wrap group mx-auto lg:mx-0" style="max-width: 360px;">
-            <div class="showcase-glow"></div>
-            <img src="images/bottle.jpeg" alt="Varidhi Branded Water Bottle" class="showcase-bottle relative z-10 w-full object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" />
-            <!-- Label highlight overlay -->
-            <div class="label-highlight absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div class="border-2 border-gold-400/80 rounded-md shadow-glow-gold" style="width: 55%; height: 38%; margin-top: 5%;"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content right -->
-        <div class="flex-1 reveal-up" style="--delay: 0.15s">
-          <span class="section-tag">The Medium</span>
-          <h2 class="section-heading mt-4 text-left">
-            Your Brand Message<br />
-            <span class="gradient-text">Travels Everywhere.</span>
-          </h2>
-          <p class="text-slate-300 text-lg leading-relaxed mt-6 mb-10">
-            A water bottle is one of the most personal, durable, and high-attention-span advertising surfaces ever created. People carry it, hold it, share it — and then scan it.
-          </p>
-
-          <ul class="space-y-5">
-            <li class="flex items-start gap-4">
-              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center">
-                <i class="fa-solid fa-check text-xs text-gold-400"></i>
-              </span>
-              <div>
-                <div class="font-semibold text-white">Physical + Digital Fusion</div>
-                <div class="text-slate-400 text-sm mt-0.5">Offline bottle meets online destination via QR — bridging two worlds.</div>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center">
-                <i class="fa-solid fa-check text-xs text-gold-400"></i>
-              </span>
-              <div>
-                <div class="font-semibold text-white">Zero Ad Fatigue</div>
-                <div class="text-slate-400 text-sm mt-0.5">Consumers aren't bombarded — they interact on their own terms.</div>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-ocean-800 border border-ocean-600 flex items-center justify-center">
-                <i class="fa-solid fa-check text-xs text-gold-400"></i>
-              </span>
-              <div>
-                <div class="font-semibold text-white">Eco-Conscious Distribution</div>
-                <div class="text-slate-400 text-sm mt-0.5">Every bottle serves a real purpose — hydration with a message.</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VALUE / TRUST SECTION ===== -->
-  <section id="why-varidhi" class="py-28 bg-gradient-to-b from-ocean-900/20 to-ocean-950 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center mb-20 reveal-up">
-        <span class="section-tag">Our Edge</span>
-        <h2 class="section-heading mt-4">Why Leading Brands Choose Varidhi</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="value-card reveal-up" style="--delay: 0s">
-          <div class="value-card-icon"><i class="fa-solid fa-link text-ocean-300"></i></div>
+          <!-- Quick Links -->
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">Offline + Digital Synergy</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Most advertising lives entirely in the digital realm, competing for 2 seconds of attention. Varidhi gives you a physical touchpoint that earns genuine engagement and directs to digital content.</p>
+            <h4
+              class="text-white font-semibold mb-5 text-sm uppercase tracking-widest"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="pages/product.html" class="footer-link">Our Product</a>
+              </li>
+              <li><a href="pages/faq.html" class="footer-link">FAQ</a></li>
+              <li>
+                <a href="pages/about.html" class="footer-link">About Us</a>
+              </li>
+              <li>
+                <a href="pages/contact.html" class="footer-link">Contact</a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="value-card reveal-up" style="--delay: 0.1s">
-          <div class="value-card-icon"><i class="fa-solid fa-hand-pointer text-ocean-300"></i></div>
-          <div>
-            <h3 class="text-xl font-bold text-white mb-2">Direct Consumer Engagement</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">No intermediaries. No algorithms. Your ad is physically handed to a real human being who chose to hydrate — one of the most open moments for brand connection.</p>
-          </div>
-        </div>
-        <div class="value-card reveal-up" style="--delay: 0.2s">
-          <div class="value-card-icon"><i class="fa-solid fa-leaf text-ocean-300"></i></div>
-          <div>
-            <h3 class="text-xl font-bold text-white mb-2">Eco-Conscious Distribution</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Our bottles serve dual purpose — clean hydration and clean advertising. We partner with sustainability-focused outlets to ensure responsible distribution at scale.</p>
-          </div>
-        </div>
-        <div class="value-card reveal-up" style="--delay: 0.3s">
-          <div class="value-card-icon"><i class="fa-solid fa-arrows-up-down-left-right text-ocean-300"></i></div>
-          <div>
-            <h3 class="text-xl font-bold text-white mb-2">Scalable Brand Exposure</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Start with one city, scale to the nation. Our modular distribution network lets you control geography, volume, and budget — adapting to your campaign in real time.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== CTA SECTION ===== -->
-  <section id="cta" class="py-28 relative overflow-hidden">
-    <div class="cta-bg absolute inset-0"></div>
-    <div class="absolute inset-0 bg-ocean-950/50"></div>
-    <div class="relative z-10 text-center max-w-4xl mx-auto px-6 lg:px-12 reveal-up">
-      <span class="section-tag mb-6 inline-block">Get Started Today</span>
-      <h2 class="font-playfair text-4xl md:text-6xl font-black text-white leading-tight mb-6">
-        Ready to Put Your Brand<br />
-        <span class="gradient-text">in Every Hand?</span>
-      </h2>
-      <p class="text-slate-300 text-xl mb-10 leading-relaxed">
-        Join forward-thinking brands advertising on Varidhi's distribution network.<br />
-        Real bottles. Real people. Real results.
-      </p>
-      <a href="pages/contact.html" class="btn-primary px-10 py-5 rounded-full font-bold text-lg text-white inline-flex items-center gap-3 group">
-        Advertise With Varidhi
-        <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1.5"></i>
-      </a>
-    </div>
-  </section>
+          <!-- Contact -->
+          <div>
+            <h4
+              class="text-white font-semibold mb-5 text-sm uppercase tracking-widest"
+            >
+              Contact
+            </h4>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-envelope text-ocean-400 text-sm mt-0.5"
+                ></i>
+                <a href="mailto:hello@varidhi.in" class="footer-link text-sm"
+                  >hello@varidhi.in</a
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-phone text-ocean-400 text-sm mt-0.5"></i>
+                <span class="text-slate-400 text-sm">+91 98765 43210</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-location-dot text-ocean-400 text-sm mt-0.5"
+                ></i>
+                <span class="text-slate-400 text-sm">India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-ocean-950 border-t border-ocean-800/40 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        <!-- Brand -->
-        <div class="md:col-span-2">
-          <a href="index.html">
-            <img src="images/logo.png" alt="Varidhi" class="h-40 w-auto object-contain mb-4" />
-          </a>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
-            Varidhi turns everyday water bottles into powerful advertising surfaces, connecting brands with real consumers through QR-powered experiences.
+        <div
+          class="border-t border-ocean-800/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <p class="text-slate-500 text-sm">
+            © 2026 Varidhi. All rights reserved.
           </p>
-          <!-- Social Icons -->
-          <div class="flex items-center gap-4 mt-6">
-            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="text-slate-500 hover:text-slate-300 text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-slate-500 hover:text-slate-300 text-sm transition-colors"
+              >Terms of Service</a
+            >
           </div>
         </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-widest">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="pages/product.html" class="footer-link">Our Product</a></li>
-            <li><a href="pages/faq.html" class="footer-link">FAQ</a></li>
-            <li><a href="pages/about.html" class="footer-link">About Us</a></li>
-            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-widest">Contact</h4>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-envelope text-ocean-400 text-sm mt-0.5"></i>
-              <a href="mailto:hello@varidhi.in" class="footer-link text-sm">hello@varidhi.in</a>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-phone text-ocean-400 text-sm mt-0.5"></i>
-              <span class="text-slate-400 text-sm">+91 98765 43210</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-location-dot text-ocean-400 text-sm mt-0.5"></i>
-              <span class="text-slate-400 text-sm">India</span>
-            </li>
-          </ul>
-        </div>
       </div>
+    </footer>
 
-      <div class="border-t border-ocean-800/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-slate-500 text-sm">© 2026 Varidhi. All rights reserved.</p>
-        <div class="flex gap-6">
-          <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-colors">Privacy Policy</a>
-          <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
